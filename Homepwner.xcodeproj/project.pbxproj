@@ -19,6 +19,8 @@
 		C8175D6218E66CE7000DE3CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8175D4A18E66CE7000DE3CD /* UIKit.framework */; };
 		C8175D6A18E66CE7000DE3CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8175D6818E66CE7000DE3CD /* InfoPlist.strings */; };
 		C8175D6C18E66CE7000DE3CD /* HomepwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8175D6B18E66CE7000DE3CD /* HomepwnerTests.m */; };
+		C88BB86018E680300020B187 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88BB85F18E680300020B187 /* BNRItemsViewController.m */; };
+		C88BB86318E681E90020B187 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C88BB86218E681E90020B187 /* BNRItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		C8175D6718E66CE7000DE3CD /* HomepwnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HomepwnerTests-Info.plist"; sourceTree = "<group>"; };
 		C8175D6918E66CE7000DE3CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C8175D6B18E66CE7000DE3CD /* HomepwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomepwnerTests.m; sourceTree = "<group>"; };
+		C88BB85E18E680300020B187 /* BNRItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRItemsViewController.h; path = ../BNRItemsViewController.h; sourceTree = "<group>"; };
+		C88BB85F18E680300020B187 /* BNRItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRItemsViewController.m; path = ../BNRItemsViewController.m; sourceTree = "<group>"; };
+		C88BB86118E681E90020B187 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		C88BB86218E681E90020B187 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,10 @@
 			children = (
 				C8175D5518E66CE7000DE3CD /* BNRAppDelegate.h */,
 				C8175D5618E66CE7000DE3CD /* BNRAppDelegate.m */,
+				C88BB86118E681E90020B187 /* BNRItem.h */,
+				C88BB86218E681E90020B187 /* BNRItem.m */,
+				C88BB85E18E680300020B187 /* BNRItemsViewController.h */,
+				C88BB85F18E680300020B187 /* BNRItemsViewController.m */,
 				C8175D5818E66CE7000DE3CD /* Images.xcassets */,
 				C8175D4D18E66CE7000DE3CD /* Supporting Files */,
 			);
@@ -192,6 +202,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Big Nerd Ranch";
 				TargetAttributes = {
+					C8175D4218E66CE7000DE3CD = {
+						DevelopmentTeam = 3VLXNGH25N;
+					};
 					C8175D5D18E66CE7000DE3CD = {
 						TestTargetID = C8175D4218E66CE7000DE3CD;
 					};
@@ -240,6 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88BB86018E680300020B187 /* BNRItemsViewController.m in Sources */,
+				C88BB86318E681E90020B187 /* BNRItem.m in Sources */,
 				C8175D5318E66CE7000DE3CD /* main.m in Sources */,
 				C8175D5718E66CE7000DE3CD /* BNRAppDelegate.m in Sources */,
 			);
@@ -358,10 +373,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Homepwner/Homepwner-Prefix.pch";
 				INFOPLIST_FILE = "Homepwner/Homepwner-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -371,10 +389,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Homepwner/Homepwner-Prefix.pch";
 				INFOPLIST_FILE = "Homepwner/Homepwner-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -438,6 +459,7 @@
 				C8175D7118E66CE7000DE3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8175D7218E66CE7000DE3CD /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +468,7 @@
 				C8175D7418E66CE7000DE3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

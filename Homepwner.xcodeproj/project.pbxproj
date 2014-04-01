@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DD5C53018E69246009760BB /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5C52F18E69246009760BB /* BNRItemStore.m */; };
+		7DD5C53218E973E8009760BB /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5C53118E973E8009760BB /* HeaderView.xib */; };
 		C8175D4718E66CE7000DE3CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8175D4618E66CE7000DE3CD /* Foundation.framework */; };
 		C8175D4918E66CE7000DE3CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8175D4818E66CE7000DE3CD /* CoreGraphics.framework */; };
 		C8175D4B18E66CE7000DE3CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8175D4A18E66CE7000DE3CD /* UIKit.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7DD5C52E18E69246009760BB /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		7DD5C52F18E69246009760BB /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		7DD5C53118E973E8009760BB /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		C8175D4318E66CE7000DE3CD /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8175D4618E66CE7000DE3CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8175D4818E66CE7000DE3CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +124,9 @@
 				C88BB86218E681E90020B187 /* BNRItem.m */,
 				C88BB85E18E680300020B187 /* BNRItemsViewController.h */,
 				C88BB85F18E680300020B187 /* BNRItemsViewController.m */,
+				7DD5C53118E973E8009760BB /* HeaderView.xib */,
+				7DD5C52E18E69246009760BB /* BNRItemStore.h */,
+				7DD5C52F18E69246009760BB /* BNRItemStore.m */,
 				C8175D5818E66CE7000DE3CD /* Images.xcassets */,
 				C8175D4D18E66CE7000DE3CD /* Supporting Files */,
 			);
@@ -233,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD5C53218E973E8009760BB /* HeaderView.xib in Resources */,
 				C8175D5118E66CE7000DE3CD /* InfoPlist.strings in Resources */,
 				C8175D5918E66CE7000DE3CD /* Images.xcassets in Resources */,
 			);
@@ -253,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD5C53018E69246009760BB /* BNRItemStore.m in Sources */,
 				C88BB86018E680300020B187 /* BNRItemsViewController.m in Sources */,
 				C88BB86318E681E90020B187 /* BNRItem.m in Sources */,
 				C8175D5318E66CE7000DE3CD /* main.m in Sources */,

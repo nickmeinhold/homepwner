@@ -13,8 +13,6 @@
 
 @interface BNRItemsViewController()
 
-@property (nonatomic, strong) IBOutlet UIView *headerView;
-
 @end
 
 @implementation BNRItemsViewController
@@ -35,49 +33,23 @@
     
 }
 
--(IBAction)togglleEditMode:(id)sender
-{
-    
-    // if you are currently in editng mode
-    if(self.isEditing)
-    {
-        // change the text of the button to inform the user of the state
-        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-        
-        // turn off edting mode
-        [self setEditing:NO animated:YES];
-    }
-    else
-    {
-        // change the text of the button to inform the user of the state
-        [sender setTitle:@"Done" forState:UIControlStateNormal];
-        
-        // enter edting mode
-        [self setEditing:YES animated:YES];
-    }
-    
-}
-
--(UIView*)headerView
-{
-    // if you have not loaded the header view yet
-    if(!_headerView)
-    {
-        // load headerview.xib
-        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
-    }
-    
-    return _headerView;
-    
-}
-
 -(instancetype)init
 {
     // call the super class's designated initializer
     self = [super initWithStyle:UITableViewStylePlain];
     if(self)
     {
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"Homepwner";
         
+        // create a new bar button item that will send
+        // addNewItem: to BNRItemsViewController
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewItem:)];
+        
+        // set this bar button as the right item in the NavigationItem
+        navItem.rightBarButtonItem = bbi;
+        
+        navItem.leftBarButtonItem = self.editButtonItem;
     }
     
     return self;
@@ -93,8 +65,13 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
-    UIView *header = self.headerView;
-    [self.tableView setTableHeaderView:header];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
     
 }
 
@@ -141,6 +118,17 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    BNRDetailViewController *detailViewController = [[BNRDetailViewController alloc] init];
+    
+    NSArray *items = [[BNRItemStore sharedStore] allItems];
+    BNRItem *selectedItem = items[indexPath.row];
+    
+    // give detail view controller a pointer to the item object in row
+    detailViewController.item = selectedItem; 
+    
+    // push it onto the stack
+    [self.navigationController pushViewController:detailViewController animated:YES];
     
 }
+
 @end

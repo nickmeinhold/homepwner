@@ -132,4 +132,13 @@
     return descriptionString;
 }
 
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.itemName forKey:@"itemName"];
+    [aCoder encodeObject:self.serialNumber forKey:@"serialNumber"];
+    [aCoder encodeObject:self.dateCreated forKey:@"dateCreated"]; 
+    [aCoder encodeObject:self.itemKey forKey:@"itemKey"];
+    
+}
+
 @end
